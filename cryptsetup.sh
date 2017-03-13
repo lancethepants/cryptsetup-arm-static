@@ -12,9 +12,9 @@ MAKE="make -j`nproc`"
 ######## ####################################################################
 
 mkdir $SRC/lvm2 && cd $SRC/lvm2
-wget http://http.debian.net/debian/pool/main/l/lvm2/lvm2_2.02.142.orig.tar.xz
-tar xvJf lvm2_2.02.142.orig.tar.xz
-cd lvm2-2.02.142
+wget ftp://sources.redhat.com/pub/lvm2/releases/LVM2.2.02.168.tgz
+tar zxvf LVM2.2.02.168.tgz
+cd LVM2.2.02.168
 
 ./configure \
 --prefix=/mmc \
@@ -48,9 +48,9 @@ make install
 ################ ############################################################
 
 mkdir $SRC/libgpg-error && cd $SRC/libgpg-error
-wget https://gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.21.tar.bz2
-tar xvjf libgpg-error-1.21.tar.bz2
-cd libgpg-error-1.21
+wget https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.27.tar.bz2
+tar xvjf libgpg-error-1.27.tar.bz2
+cd libgpg-error-1.27
 
 ./configure \
 --prefix=/mmc \
@@ -66,9 +66,9 @@ make install
 ########## ##################################################################
 
 mkdir $SRC/gcrypt && cd $SRC/gcrypt
-wget https://gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.6.4.tar.bz2
-tar xvjf libgcrypt-1.6.4.tar.bz2
-cd libgcrypt-1.6.4
+wget https://www.gnupg.org/ftp/gcrypt/libgcrypt/libgcrypt-1.7.6.tar.bz2
+tar xvjf libgcrypt-1.7.6.tar.bz2
+cd libgcrypt-1.7.6
 
 ./configure \
 --prefix=/mmc \
@@ -83,9 +83,9 @@ make install
 ############## ##############################################################
 
 mkdir $SRC/cryptsetup && cd $SRC/cryptsetup
-wget https://www.kernel.org/pub/linux/utils/cryptsetup/v1.7/cryptsetup-1.7.0.tar.xz
-tar xvJf cryptsetup-1.7.0.tar.xz
-cd cryptsetup-1.7.0
+wget https://www.kernel.org/pub/linux/utils/cryptsetup/v1.7/cryptsetup-1.7.3.tar.xz
+tar xvJf cryptsetup-1.7.3.tar.xz
+cd cryptsetup-1.7.3
 
 LIBS="-lpthread" \
 ./configure \
